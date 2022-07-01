@@ -9,6 +9,9 @@
 		<members>apexExpressionOperators</members>
 		<members>ApexClassConstructorMethods</members>
 		<members>ApexLoopConditions</members>
+		<members>InheritancePolymorphismByInterface</members>
+		<members>AccessingSObjectsFields</members>
+		<members>CountryDataProvider</members>
 		<members>StudentDataProviderClass</members>
 		<name>ApexClass</name>
     </types>
