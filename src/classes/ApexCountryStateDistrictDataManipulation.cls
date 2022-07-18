@@ -126,17 +126,18 @@ public with sharing class ApexCountryStateDistrictDataManipulation {
             From District__c 
         ];
         if (!listOfDistrictStateAndCountry.isEmpty()) {
-            for ( District__c countryStateDistrictData : listOfDistrictStateAndCountry) {
-                if (!mapOfCountryWithDistrictAndStates.containsKey(countryStateDistrictData.State_Name__r.Country_Name__r.Name)) {
-                    mapOfCountryWithDistrictAndStates.put(countryStateDistrictData.State_Name__r.Country_Name__r.Name, new Map<String, List<String>>());
-                    if (mapOfCountryWithDistrictAndStates.containsKey(countryStateDistrictData.State_Name__r.Country_Name__r.Name)) {
-                        mapOfCountryWithDistrictAndStates.get(countryStateDistrictData.State_Name__r.Country_Name__r.Name).put(countryStateDistrictData.State_Name__r.Name,new List<String>());
-                        if (!mapOfCountryWithDistrictAndStates.get(countryStateDistrictData.State_Name__r.Country_Name__r.Name).get(countryStateDistrictData.State_Name__r.Name).contains(countryStateDistrictData.Name)){  
-                            mapOfCountryWithDistrictAndStates.get(countryStateDistrictData.State_Name__r.Country_Name__r.Name).get(countryStateDistrictData.State_Name__r.Name).add(countryStateDistrictData.Name);
-                        }
-                    }
+            for (District__c district : listOfDistrictStateAndCountry) {
+                if (!mapOfCountryWithDistrictAndStates.containsKey(district.State_Name__r.Country_Name__r.Name)) {
+                    mapOfCountryWithDistrictAndStates.put(district.State_Name__r.Country_Name__r.Name, new Map<String, List<String>>());
+                }
+                if (!mapOfCountryWithDistrictAndStates.get(district.State_Name__r.Country_Name__r.Name).containsKey(district.State_Name__r.Name)) {
+                    mapOfCountryWithDistrictAndStates.get(district.State_Name__r.Country_Name__r.Name).put(district.State_Name__r.Name, new list<String>());
+                }
+                if (!mapOfCountryWithDistrictAndStates.get(district.State_Name__r.Country_Name__r.Name).get(district.State_Name__r.Name).contains(district.Name)) {
+                    mapOfCountryWithDistrictAndStates.get(district.State_Name__r.Country_Name__r.Name).get(district.State_Name__r.Name).add(district.Name);
                 }
             }
+            
         }
         System.debug('Map of country with state and district->' + mapOfCountryWithDistrictAndStates);
         return mapOfCountryWithDistrictAndStates;
