@@ -13,16 +13,33 @@
 		<members>AccessingSObjectsFields</members>
 		<members>CountryDataProvider</members>
 		<members>StudentDataProviderClass</members>
+		<members>ApexDmlRelation</members>
+		<members>ApexCountryStateDistrictDataManipulation</members>
+        <members>CountryStateDistrictJsonGenerator</members>
 		<name>ApexClass</name>
     </types>
     <types>
         <members>Dream_World__c.Dream_World_Title__c</members>
 		<members>Book__c.Price__c</members>
+		<members>Country__c.Country_Code__c</members>
+        <members>Country__c.Country_JSON_Data__c</members>
+        <members>Country__c.Total_Number_of_Districts__c</members>
+        <members>Country__c.Total_Number_of_States__c</members>
+        <members>District__c.Country_Name__c</members>
+        <members>District__c.District_Pin_Code__c</members>
+        <members>District__c.State_Name__c</members>
+        <members>State__c.Country_Name__c</members>
+        <members>State__c.State_Code__c</members>
+        <members>State__c.State_s_Country__c</members>
+        <members>State__c.Total_Number_of_Districts__c</members>
         <name>CustomField</name>
     </types>
     <types>
         <members>Dream_World__c</members>
 		<members>Book__c</members>
+		<members>Country__c</members>
+        <members>District__c</members>
+        <members>State__c</members>
         <name>CustomObject</name>
     </types>
 	<types>
@@ -32,6 +49,9 @@
     <types>
         <members>Dream_World__c</members>
 		<members>Book__c</members>
+		<members>Country__c</members>
+        <members>District__c</members>
+        <members>State__c</members>
         <name>CustomTab</name>
     </types>
 	<types>
@@ -135,6 +155,9 @@
         <members>Teacher__c-Teacher Layout</members>
         <members>Year_Of_Class__c-Year Of Class Layout</members>
 		<members>Book__c-Book Layout</members>
+		<members>Country__c-Country Layout</members>
+        <members>District__c-District Layout</members>
+        <members>State__c-State Layout</members>
         <name>Layout</name>
     </types>
     <types>
@@ -154,5 +177,15 @@
 		<members>*</members>
 		<name>ApexTrigger</name>
 	</types>
+	<types>
+        <members>Country__c.All</members>
+        <members>District__c.All</members>
+        <members>State__c.All</members>
+        <name>ListView</name>
+    </types>
+	<types>
+        <members>Country__c</members>
+        <name>SharingRules</name>
+    </types>
 	<version>53.0</version>
 </Package>
